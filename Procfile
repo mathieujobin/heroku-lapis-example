@@ -1,3 +1,3 @@
 #web: lapis server heroku
-web:     lua web.lua $PORT
+web:  luarocks install lapis && lua web.lua $PORT
 
