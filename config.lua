@@ -1,9 +1,8 @@
 local config
-do
-  local _obj_0 = require("lapis.config")
-  config = _obj_0.config
-end
+config = require("lapis.config").config
 return config("heroku", function()
+  num_workers(8)
+  code_cache("on")
   port(os.getenv("PORT"))
-  return postgresql_url(os.getenv("HEROKU_POSTGRESQL_COPPER_URL"))
+  return postgresql_url(os.getenv("DATABASE_URL"))
 end)
