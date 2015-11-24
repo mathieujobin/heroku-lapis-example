@@ -1,6 +1,7 @@
 local config
 config = require("lapis.config").config
 local database_url = os.getenv("DATABASE_URL")
+print(database_url)
 local dbinfo
 do
   local _accum_0 = { }

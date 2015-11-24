@@ -2,6 +2,7 @@
 import config from require "lapis.config"
 
 database_url = os.getenv "DATABASE_URL"
+print(database_url)
 dbinfo = [x for x in string.gmatch(database_url, "([%u%l%d%-%.]+)")]
 
 config "development", ->
