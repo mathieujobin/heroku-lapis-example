@@ -1,1 +1,1 @@
-web: lapis server heroku
+web: lapis && lapis server heroku --trace
